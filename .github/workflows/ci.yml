@@ -13,8 +13,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Build
-        working-directory: /src
+        working-directory: ./src
         run: dotnet build --configuration Release
       - name: Test
-        working-directory: /src
+        working-directory: ./src
         run: dotnet test --configuration Release --no-build
