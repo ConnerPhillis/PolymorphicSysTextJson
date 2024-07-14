@@ -6,8 +6,15 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <PackageId>PolymorphicSysTextJson</PackageId>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/ConnerPhillis/PolymorphicSysTextJson</RepositoryUrl>
+  </PropertyGroup>
+
   <ItemGroup>
-    <ProjectReference Include="..\PolymorphicSysTextJson.Abstractions\PolymorphicSysTextJson.Abstractions.csproj" />
+    <ProjectReference
+      Include="..\PolymorphicSysTextJson.Abstractions\PolymorphicSysTextJson.Abstractions.csproj" />
   </ItemGroup>
 
 </Project>
