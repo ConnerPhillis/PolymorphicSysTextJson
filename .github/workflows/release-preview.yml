@@ -16,11 +16,11 @@ jobs:
         run: dotnet pack --configuration Release /p:Version=${VERSION} --output .
       - name: Push Abstractions
         working-directory: ./src
-        run: dotnet nuget push PolymorphicSysTextJson.Abstractions.${VERSION}.nupkg --source https://nuget.pkg.github.com/acraven/index.json --api-key ${GITHUB_TOKEN}
+        run: dotnet nuget push PolymorphicSysTextJson.Abstractions.${VERSION}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${NUGET_TOKEN}
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NUGET_TOKEN: ${{ secrets.NUGET_TOKEN }}
       - name: Push Base
         working-directory: ./src
-        run: dotnet nuget push PolymorphicSysTextJson.${VERSION}.nupkg --source https://nuget.pkg.github.com/acraven/index.json --api-key ${GITHUB_TOKEN}
+        run: dotnet nuget push PolymorphicSysTextJson.${VERSION}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${NUGET_TOKEN}
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NUGET_TOKEN: ${{ secrets.NUGET_TOKEN }}
